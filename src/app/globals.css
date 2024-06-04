@@ -1,0 +1,95 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.btn-rounded {
+  border-radius: 24px !important;
+}
+:root {
+  --primary: #6059c9;
+  --secondary: #ffc20e;
+  --neutral: #fffcf7;
+  --dark: #22130c;
+  --headColor: #2b2b39;
+  --paColor: #7d7c8d;
+  --black: #000000;
+  --white: #ffffff;
+  --transparent: transparent;
+}
+
+/* nav bar */
+/* Reset some default styles */
+
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+   background: white;
+color: var(--headColor);
+  position: relative;
+}
+
+.logo a {
+  
+  text-decoration: none;
+  font-size: 24px;
+}
+
+.menuIcon {
+  display: none;
+  font-size: 24px;
+  cursor: pointer;
+  
+}
+
+.navLinks {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+  transition: max-height 0.3s ease-out;
+}
+
+.navLinks li a {
+  
+  text-decoration: none;
+  font-size: 18px;
+}
+
+.navLinks li a:hover {
+  color: #6059c9;
+}
+
+/* Mobile view */
+@media (max-width: 768px) {
+  .menuIcon {
+    display: block;
+  }
+
+  .navLinks {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    background-color: white;
+    max-height: 0;
+    overflow: hidden;
+    
+  }
+
+  .navLinksOpen {
+    max-height: 300px; /* Adjust according to your needs */
+
+  }
+
+  .navLinks li {
+    text-align: center;
+    /* padding: 5px 4rem; */
+   
+    /* border-top: 1px solid #d1d1d1; */
+  }
+}
+
